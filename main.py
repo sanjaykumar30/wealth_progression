@@ -4,6 +4,8 @@ import pandas as pd
 import altair as alt
 
 def compute(initial_wealth,faster_growth,slower_growth,p_faster_growth):
+    st.write('Experiment Completed ! Rendering Visualization')
+
     total_in=1000
     time_step=60
     df_dict={}
@@ -93,7 +95,6 @@ if __name__=='__main__':
     *Slower Growth={slower_growth}%\n
     *Probability of Faster Growth={p_faster_growth}\n
     """)
-    st.write('Experiment Completed ! Rendering Visualization')
 
     if st.sidebar.button("Run Experiment"):
         compute(initial_wealth,faster_growth,slower_growth,p_faster_growth)
